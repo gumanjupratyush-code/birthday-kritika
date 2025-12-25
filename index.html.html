@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Kritika 💖</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #fff0f6, #e8f7ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .page {
+      display: none;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+      padding: 20px;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff4f9a;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: #444;
+      margin: 10px 0;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4f9a;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff2f86;
+      transform: scale(1.08);
+    }
+
+    /* SUS CHARACTER */
+    .sus {
+      width: 140px;
+      height: 180px;
+      background: #ff6f91;
+      border-radius: 60px 60px 40px 40px;
+      margin: 0 auto 20px;
+      position: relative;
+      animation: wiggle 2.5s infinite;
+    }
+
+    .sus::before {
+      content: '';
+      width: 80px;
+      height: 40px;
+      background: #9adfff;
+      border-radius: 20px;
+      position: absolute;
+      top: 40px;
+      left: 30px;
+    }
+
+    /* PET */
+    .pet {
+      width: 160px;
+      margin: 0 auto 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .pet-face {
+      background: #fff;
+      border-radius: 50%;
+      padding: 35px;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .eye {
+      width: 14px;
+      height: 14px;
+      background: #333;
+      border-radius: 50%;
+      position: absolute;
+      top: 45%;
+      animation: blink 4s infinite;
+    }
+
+    .eye.left { left: 38%; }
+    .eye.right { right: 38%; }
+
+    .mouth {
+      width: 28px;
+      height: 12px;
+      border-bottom: 3px solid #ff4f9a;
+      border-radius: 0 0 20px 20px;
+      position: absolute;
+      bottom: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes blink {
+      0%,95%,100% { height: 14px; }
+      97% { height: 2px; }
+    }
+
+    @keyframes wiggle {
+      0%,100% { transform: rotate(0deg); }
+      50% { transform: rotate(3deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page active" id="page1">
+    <div class="sus"></div>
+    <h1>WHO'S HERE?? 👀</h1>
+    <button onclick="nextPage()">Its mee Kritika </button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page" id="page2">
+    <div class="pet">
+      <div class="pet-face">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="mouth"></div>
+      </div>
+    </div>
+
+    <h1>HORRAYYY ITS YOUR BIRTHDAY TODAYYY! 🎉</h1>
+
+    <p>HAPPIEST BIRTHDAY to you babee 💖</p>
+    <p>I hope that you enjoy your day to your fullest ✨</p>
+    <p>Always keep on your bright smile on your face </p>
+    <p>You have turned my age noww hahaha</p>
+    <p>I will always be there for you whether its on bad days or good ones </p>
+    <p><strong>AND Thankyou for always being there for me </strong></p>
+  </div>
+
+  <script>
+    function nextPage() {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
